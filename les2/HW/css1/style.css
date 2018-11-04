@@ -1,0 +1,179 @@
+/* Селектор типа */
+body
+{
+  font-size: 20px;
+}
+
+h1
+{
+  text-decoration: underline;
+}
+
+/* убрать подчеркивание у ссылок */
+a
+{
+  text-decoration: none;
+}
+
+/* Селектор класса */
+.about
+{
+  font-size: 24px;
+}
+
+/* Покрасить все элементы с классом attribute в зеленый цвет */
+.attribute
+{
+  color: green;
+}
+
+/* Селектор идентификатора */
+#intro
+{
+  border-top: 1px solid;
+  margin-top: 50px;
+}
+
+/* Дочерний селектор */
+section h2
+{
+  color: blue;
+}
+
+/* Прямой дочерний селектор */
+#intro > .children
+{
+  color: gray;
+}
+
+/* Сделать цвет текста в списке дочерних селекторов красным */
+.children
+{
+  color: red;
+}
+
+/* Селектор наличия атрибута */
+a[target]
+{
+  padding: 0 10px;
+}
+
+/* Селектор сравнения атрибута */
+a[href="https://google.com/"]
+{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+a[href*="freecodecamp.org"]
+{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+}
+a[href^="https://developer.mozilla.org"]
+{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+}
+a[tag*="docs"]
+{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+}
+a[href*="selectors"]
+{
+  color: red;
+}
+/* Выделить ссылку у которой в атрибуте href значение содержит freecodecamp.org */
+
+/* Выделить ссылку у которой значение атрибута href начинается с https://developer.mozilla.org */
+
+/* Выделить ссылку у которой значение атрибута href заканчивается на "/complex-selectors" */
+
+/* Выделить ссылку у которой значение атрибута tag содержит слово docs */
+
+/* Выделить ссылку у которой значение атрибута href содержит слово selectors */
+
+/** Псквдоклассы */
+table
+{
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td
+{
+  padding: 6px 15px;
+}
+
+/* Покрасить заголовок таблицы */
+
+
+thead{
+  background: #42444e;
+  color: #fff;
+  text-align: left;
+}
+
+/* Добавить границы всем ячейкам */
+td{
+  border-right: 1px solid #c6c9cc;
+  border-bottom: 1px solid #c6c9cc;
+}
+
+/* Добавить левую границу всем первым ячейкам в строке */
+td:nth-child(1)
+{
+  border-left: 1px solid #c6c9cc;
+}
+
+/* Закруглить левый верхний угол таблицы */
+table
+{
+  border-top-left-radius: 5px;
+}
+
+/* Закруглить правый верхний угол таблицы */
+table
+{
+  border-top-right-radius: 6px;
+}
+
+/* Покрасить четные строки */
+tr:nth-child(2n)
+{
+  background: #eaeaed;
+}
+
+/* Закруглить нижний левый угол таблицы */
+table
+{
+  border-bottom-left-radius: 6px;
+}
+
+/* Закруглить нижний правый угол таблицы */
+table
+{
+  border-bottom-right-radius: 6px;
+}
+
+/* Добавить таблице отступ снизу */
+table
+{
+  margin-bottom: 12px;
+}
+
+/** Псевдоэлементы */
+
+/* Покрасить первую букву заголовка "Псевдоэлементы" в красный цвет */
+.pseudo_elements h2:first-letter
+{
+  color: red;
+}
+
+/* Покрасить первую линию абзацев в секции псевдоэлементов в красный цвет */
+.pseudo_elements p:first-line
+
+{
+  color: red;
+}

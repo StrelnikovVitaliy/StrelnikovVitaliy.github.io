@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.window {
+
+    width: 900px;
+    height: 1000px;
+    background: url("https://img1.goodfon.ru/wallpaper/big/4/1d/peyzazh-priroda-rastenie-1987.jpg");
+    background-size: cover;
+}
+
+.card {
+    margin: 50px auto;
+    width: 800px;
+    height: 900px;
+    background: white;
+    border-radius: 50px;
+
+}
+
+.part-information {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    display: flex;
+    height: 400px;
+    background: #2CB5DC;
+    border-radius: 50px 50px 0 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-avatar {
+    height: 270px;
+    width: 270px;
+    padding: 20px;
+    border-radius: 150px;
+    border: 3px solid #eaeaed;
+}
+
+.info-block {
+    font-size: 40px;
+    color: white;
+
+}
+
+.user-name {
+    text-transform: uppercase;
+}
+
+.link-to-profile {
+    text-decoration: none;
+    color: white;
+}
+
+.part-followers {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: flex;
+    height: 280px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav__button {
+    background: #F8F3F0;
+    width: 234px;
+    height: 165px;
+    font-size: 37px;
+    display: block;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 10px;
+
+}
+
+.nav__button:nth-child(1) {
+    border-radius: 30px 0 0 30px;
+}
+
+.nav__button:last-child {
+    border-radius: 0 30px 30px 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: grey;
+
+}
+
+p {
+    color: grey;
+    font-size: 26px;
+}
+
+.nav__button:not(:first-child),
+.nav__button + .nav__button {
+    border-left: 3px solid #fff;
+}
+
+.part-button {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: flex;
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+    background: #F8F3F0;
+    border-radius: 0 0 50px 50px;
+}
+
+.logo
+{
+    height: 60px;
+    width: 60px;
+margin-right: 5%;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    height: 100px;
+    width: 702px;
+    border-radius: 20px;
+    background: linear-gradient(#f85032 0%, #f16f5c 13%, #f6290c 57%, #f6290c 66%, #f02f17 85%, #e73827 100%);
+}
+
+a.button:hover {
+    background: linear-gradient(#f85032 28%, #f85032 71%, #f02f17 85%, #f6290c 88%, #f6290c 92%, #e73827 100%);
+}
+
+a.button:active {
+    background: linear-gradient(#f85032 28%, #f02f17 39%, #f85032 71%, #f6290c 88%, #f6290c 92%, #e73827 100%);
+}
+

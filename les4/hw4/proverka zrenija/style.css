@@ -1,0 +1,46 @@
+.tablebox {
+    text-transform: uppercase;
+    max-width: 30%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.firstrow,
+.secondrow,
+.thirdrow,
+.forthrow,
+.fivthrow,
+.sixthrow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.firstrow {
+    font-size: 15vw;
+}
+
+.secondrow {
+    font-size: 10vw;
+
+}
+
+.thirdrow {
+    font-size: 8vw;
+
+}
+
+.forthrow {
+    font-size: 5vw;
+
+}
+
+.fivthrow {
+    font-size: 3vw;
+
+}
+
+.sixthrow {
+    font-size: 1vw;
+
+}

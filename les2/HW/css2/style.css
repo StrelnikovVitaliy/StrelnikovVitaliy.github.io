@@ -1,0 +1,86 @@
+/*
+Задание:
+1. Первая буква, каждого абзаца статьи должна иметь больший шрифт и быть красной.
+*/
+
+/*
+2. Заголовок "Огород" должен быть оранжевым
+*/
+
+/*
+3. Слова "Фрукты" и "Овощи" жирным шрифтом, черного цвета.
+*/
+
+/*
+4. В разделе "Огород" список фруктов должен быть серым, а овощей зеленым.
+*/
+
+/*
+5. В разделе "Склад" список фруктов должен быть оранжевым, а овощей коричневым.
+
+6. Заголовки таблицы должны быть жирными и черными. Текст должен центрироваться.
+6.1. Имена студентов зелеными
+6.2. Четные строки должны получить голубой фон.
+6.3. Отметки посещения должны центрироваться.
+6.4. Наведение мышки на отметку должно менять фон ячейки на красный, а цвет текста делать белым.
+*/
+
+p:first-letter
+{
+	color: red;
+	font-size: 20px;
+}
+#allotment h2{
+	color: orange;
+}
+
+ul > li{
+	font-weight: bold;
+	color: black;
+}
+ol > li{
+	font-weight: normal;
+}
+
+#allotment > ul > li:nth-child(1) > ol
+{
+	color: grey;
+}
+
+#allotment > ul > li:nth-child(2) > ol
+{
+	color: green;
+}
+
+#warehouse > ul > li:nth-child(1) > ol
+{
+	color: orange;
+}
+
+#warehouse > ul > li:nth-child(2) > ol
+{
+	color: brown;
+}
+thead
+{
+	font-weight: bold;
+	color: black;
+	text-align: center;
+}
+
+tbody  > tr > td:nth-child(1)
+{
+	color: green;
+}
+tbody  > tr:nth-child(2n)
+{
+	background-color: skyblue;
+}
+tbody  > tr > td:nth-child(n+2)
+{
+	text-align: center;
+}
+tbody  > tr > td:nth-child(n+2):hover{
+	background-color: red;
+	color: white;
+}

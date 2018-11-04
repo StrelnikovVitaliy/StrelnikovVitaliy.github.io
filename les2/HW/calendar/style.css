@@ -1,0 +1,67 @@
+html {
+	font-family: Calisto MT, Bookman Old Style, Bookman, Goudy Old Style, Garamond, Hoefler Text, Bitstream Charter, Georgia, serif;
+}
+
+table {
+	border-collapse: collapse;
+	border: 2px solid rgb(200,200,200);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2;
+
+}
+
+td{
+	background-color: whitesmoke;
+	border: 1px solid rgb(200,200,200);
+	padding: 20px 20px;
+}
+
+.titlemon{
+	font-size: 18px;
+	background-color: green;
+	text-align: center;
+	padding: 10px 10px;
+	text-shadow: 3px 4px 4px white;
+}
+.weekend{
+	background-color: darkseagreen;
+	color: red;
+	text-shadow: 3px 3px 2px black;
+}
+
+.days td{
+	background-color: palegreen;
+	color: darkgoldenrod;
+	font-weight: bold;
+	text-shadow: 3px 3px 3px gold;
+}
+.emptyday{
+	background-color: white;
+}
+.numday:hover{
+cursor: pointer;
+color: blue;
+background-color: gainsboro;
+/* Safari */
+-webkit-transform: rotate(-5deg);
+/* Firefox */
+-moz-transform: rotate(-5deg);
+/* IE */
+-ms-transform: rotate(-5deg);
+/* Opera */
+-o-transform: rotate(-5deg);
+}
+.weekend:hover{
+cursor: pointer;
+color: red;
+background-color: forestgreen;
+/* Safari */
+-webkit-transform: rotate(-5deg);
+/* Firefox */
+-moz-transform: rotate(-5deg);
+/* IE */
+-ms-transform: rotate(-5deg);
+/* Opera */
+-o-transform: rotate(-5deg);
+}

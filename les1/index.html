@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Registration</h1>
+	<form action="" method="post" name="personalInformation">
+		<fieldset>
+			<legend>Personal information</legend>
+
+			<label for="surname">
+				<span>Surname</span>
+				<input type="text" name="surname" placeholder="Enter surname" required="required">
+			</label>
+
+			<br>
+			<label for="name">
+				<span>Name</span>
+				<input type="text" name="name" placeholder="Enter name" required="required">
+			</label>
+
+			<br>
+			<label for="age">
+				<span>How old are you?</span>
+				<input type="number" name="age" size="3" required="required" min="18" max="100"placeholder="25">
+			</label>
+			<br>
+
+			<label for="bddate">
+				<span>
+					Full date of birth:
+				</span>
+				<input type="date" value="1993-05-01">
+			</label>
+			<br>
+			<label for="accpetagr">
+				<span>
+					I accept the agreement
+				</span>
+				<input type="checkbox">
+			</label>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				Registration
+			</legend>
+			<label for="Email">
+				<span>
+					Email
+				</span>
+				<input type="email" required="required" placeholder="empty@example.com">
+			</label>
+			<br>
+			<label for="pass">
+				<span>
+					Password
+				</span>
+				<input type="password" required="required" autocomplete="off">
+			</label>
+		</fieldset>
+		<fieldset>
+			
+			<legend>
+				An interesting facts about you?
+			</legend>
+			<div>
+				<div>
+					Do you love cats?
+				</div>
+				<label for="catsyes">
+					<span>
+						Yes
+					</span>
+					<input type="radio" name="cats" value="yes" required/>
+				</label>
+				<label for="catsyes">
+					<span>
+						No
+					</span>
+					<input type="radio" name="cats" value="no" required/>
+				</label>
+			</div>
+			<br>
+
+			<div>
+				<div>
+					What is your favorite color?
+				</div>
+				<br>
+				<label for="colorchange">
+					<input type="color">
+				</label>
+			</div>
+			<div>
+				<div>
+					What time do you go to bed?
+				</div>
+				<label for="datetimecheck">
+					<input type="time" value="06:00">
+				</label>
+			</div>
+			<div class="custom-select">
+				<div>
+					What your favorite brand of cars?
+				</div>
+				<select  multiple name="cars" size="3" required>
+					<option value="bmw">BMW</option>
+					<option value="audi">Audi</option>
+					<option selected value="lada">Lada</option>
+				</select>
+			</div>
+
+			<div class="slidecontainer">
+				<div>
+					How do you rate our work?
+				</div>
+				<input type="range" name="workRate" class="slider" value="3" min="0" max="5">
+			</div>
+
+		</fieldset>
+		<fieldset>
+			<legend>
+				Your comments:
+			</legend>
+			<textarea name="comments" class="cmnt" placeholder="Type here"></textarea>
+		</fieldset>
+		<button type="submit">Submit</button>
+
+	</form>
+</body>
+</html>
