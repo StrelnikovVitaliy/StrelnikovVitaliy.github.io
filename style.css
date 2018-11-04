@@ -1,116 +1,196 @@
-/* Eric Meyer's CSS Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* End of Eric Meyer's CSS Reset */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-	display: block;
-}
-body {
-	font: 12px/18px Arial, sans-serif;
-}
-.wrapper {
-	min-width: 360px;
-	max-width: 1600px;
-	margin: 0 auto;
+    padding: 0;
+    margin: 0;
 }
 
-
-/* Header
------------------------------------------------------------------------------*/
-.header {
-	height: 150px;
-	background: #FFE680;
+header {
+    background: url("img/firstbcg.jpg")no-repeat center top / cover;
+    padding-bottom: 80px;
 }
 
-
-/* Middle
------------------------------------------------------------------------------*/
-.middle {
-	width: 100%;
-	position: relative;
-}
-.middle:after {
-	display: table;
-	clear: both;
-	content: '';
-}
 .container {
-	width: 100%;
-	float: left;
-	overflow: hidden;
-}
-.content {
-	padding: 0 270px 0 270px;
+    width: 600px;
+    margin: 0 auto;
 }
 
+/*first container with menu*/
+.container__logo {
+    display: flex;
+    justify-content: center;
+}
 
-/* Left Sidebar
------------------------------------------------------------------------------*/
-.left-sidebar {
-	float: left;
-	width: 250px;
-	margin-left: -100%;
-	position: relative;
-	background: #B5E3FF;
+.logo {
+    margin-top: 65px;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    margin-top: 80px;
+}
+
+.menu li {
+    float: left;
+    display: block;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 13pt;
+}
+
+.titles__first {
+    font-size: 38pt;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 15pt;
+    color: white;
+    text-align: center;
+}
+
+.button-first {
+    text-align: center;
+    display: block;
+    padding: 18px 0;
+    margin: 80px auto;
+    text-decoration: none;
+    background: linear-gradient(#4c4c4c 0%, #595959 12%, #666666 25%,
+    #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%,
+    #1c1c1c 91%, #131313 100%);
+    color: white;
+    width: 235px;
+    border-radius: 40px;
+}
+
+/*end menu container*/
+
+
+/*description menu*/
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.description__item {
+    width: 100%;
+    margin: 20px auto;
+
+}
+
+.description__item h3 {
+    font-size: 14px;
+    color: black;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: black solid;
+}
+
+.description__item p {
+    font-size: 15px;
+}
+
+.button-second {
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    background: black;
+    color: white;
+    width: 100px;
+    border-radius: 40px;
+}
+
+/* end description menu*/
+/*information menu*/
+#cv {
+    background: black;
+}
+
+.cv {
+    display: flex;
+
+}
+
+.cv__item {
+    width: 100%;
+    margin: 60px auto;
+
+}
+
+.cv__item h3 {
+    font-size: 23px;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: #ebebeb solid;
+}
+
+.cv__item p {
+    font-size: 13px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.button-third {
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    background: white;
+    color: black;
+    width: 100px;
+    border-radius: 40px;
+}
+
+/* end information menu*/
+/*block send it now*/
+
+/*footer last line social and autor*/
+#social{
+    background: black;
+
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copiried p {
+    color: #787b80;
+}
+
+.copiried span {
+    color: #aaacaf;
+}
+
+.social__links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social__links img{
+    padding: 0 15px 0 20px;
+    height: 60px;
+    width: 60px;
 }
 
 
-/* Right Sidebar
------------------------------------------------------------------------------*/
-.right-sidebar {
-	float: left;
-	width: 250px;
-	margin-left: -250px;
-	position: relative;
-	background: #FFACAA;
-}
 
-
-/* Footer
------------------------------------------------------------------------------*/
-.footer {
-	height: 100px;
-	background: #BFF08E;
-}
+/*end footer last line social and autor*/
