@@ -349,7 +349,6 @@ h1 {
 .social {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .copiried p {
@@ -360,8 +359,16 @@ h1 {
     color: #aaacaf;
 }
 
-.social img {
-    padding-left: 5px;
+.social__links {
+    display: flex;
+    max-width: 20px;
+    max-height: 20px;
+    width: 100%;
+    padding-top: 15px;
+}
+
+.social__links img{
+    padding-right: 10px;
 }
 
 /*end footer last line social and autor*/
@@ -481,20 +488,23 @@ h1 {
         padding: 0 auto;
     }
 
-    .featured-images img{
+    .featured-images img {
         padding-top: 15px;
     }
 
 }
+
 @media screen and (max-width: 400px) {
-    .social{
+    .social {
         display: flex;
         flex-direction: column;
     }
-    .social .copiried{
+
+    .social .copiried {
         text-align: center;
     }
-    .social__links{
+
+    .social__links {
         display: flex;
         flex-direction: row;
         margin-bottom: 15px;
