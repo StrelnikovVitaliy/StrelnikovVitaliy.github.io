@@ -70,7 +70,7 @@ h1 {
     color: white;
     width: 39%;
     border-radius: 40px;
-    font-size: 1.2vh;
+    font-size: 15px;
 }
 
 /*end menu container*/
@@ -482,6 +482,7 @@ h1 {
     }
 
     .featured-images img{
+        padding-top: 15px;
     }
 
 }
