@@ -1,0 +1,56 @@
+body {
+    background: url("img/bg_05.jpg") no-repeat 100% / cover;
+}
+
+label {
+    font-weight: bold;
+}
+
+.col-6 {
+    text-align: center;
+}
+
+
+.container .row img {
+    max-width: 335px;
+    width: 90%;
+    padding-top: 10%;
+}
+.container i {
+    max-width: 10%;
+}
+
+#first__info {
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#second__info {
+
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#third__info {
+    padding: 30px;
+    border-radius: 30px;
+}
+
+#finish {
+    text-align: center;
+    padding: 30px;
+}
+
+#finish .form-check {
+    background-color: rgba(56, 64, 82, 0.6);
+    padding: 2px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#finishbutton{
+    text-align: right;
+}
+#finishbutton .btn span{
+    width: 17%;
+}
+

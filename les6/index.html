@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+</head>
+<body>
+<header id="header">
+    <div class="container" id="logo">
+        <div class="row">
+            <div class="offset-3 col-6">
+                <img src="img/logoimg_fonts.php.png" alt="logo">
+                <a href="#" data-toggle="popover"
+                   data-placement="right" data-content="Данный сайт несет исключительно информативный характер"> <i
+                        class="fas fa-info-circle"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container text-light" id="first__info">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <label for="name">Имя:</label>
+                <input type="text" name="fname" class="form-control" placeholder="Введите здесь свое имя">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <label for="surname">Фамилия:</label>
+                <input type="text" name="sname" class="form-control" placeholder="Введите здесь свою фамилию">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <label for="age">Возраст:</label>
+                <input type="number" name="age" class="form-control" placeholder="Возраст">
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <label for="birth">Дата рождения:</label>
+                <input type="date" name="birth" class="form-control" placeholder="01 05 1993">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <label for="sex" class="offset-lg-3">Пол:</label>
+                <div class="row" id="buttonjust">
+
+
+                    <div class="offset-lg-3 offset-md-1 offset-sm-1 offset-1 btn-group btn-group-toggle"
+                         data-toggle="buttons">
+
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Мужчина
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> Женщина
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-info" id="second__info">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <label for="email">Введите Ваш E-Mail:</label>
+                <input type="email" name="emailadress" class="form-control" placeholder="example@empty.com">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <label for="pass">Пароль:</label>
+                <input type="password" name="pass" class="form-control" placeholder="Введите пароль">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 offset-md-6 offset-sm-6">
+                <label for="pass">Подтверждение пароля:</label>
+                <input type="password" name="pass" class="form-control"
+                       placeholder="Введите подтверждение пароля">
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container text-warning" id="third__info">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-6">
+                <label for="adress">Адрес:</label>
+                <input type="text" name="adress" class="form-control" placeholder="Улица / номер дома / кв.">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <label for="country">Выберите страну:</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Страна</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Выберите страну...</option>
+                        <option value="1">Украина</option>
+                        <option value="2">Россия</option>
+                        <option value="3">Германия</option>
+                        <option value="4">США</option>
+                        <option value="5">Англия</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <label for="number">Номер:</label>
+                <input type="text" name="number" class="form-control" placeholder="+38-063-851-43-92">
+                <label for="empty"></label>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container text-light" id="finish">
+        <div class="row">
+            <div class="offset-lg-3 col-lg-6">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="">Я принимаю <a href="#">условия
+                        договора</a>
+                    </label>
+                </div>
+            </div>
+            <div class="offset-lg-6 col-lg-3" id="finishbutton">
+
+                <button type="button" class="btn btn-success"><span>Регистрация</span></button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</header>
+</body>
+</html>
