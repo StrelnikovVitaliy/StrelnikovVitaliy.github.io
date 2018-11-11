@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background: url("img/firstbcg.jpg")no-repeat center top / cover;
+    background: url("img/firstbcg.jpg") no-repeat center top / cover;
     padding-bottom: 80px;
 }
 
@@ -76,7 +76,6 @@ h1 {
 
 /*end menu container*/
 
-
 /*description menu*/
 
 .description {
@@ -128,7 +127,16 @@ h1 {
 .cv__item {
     width: 100%;
     margin: 60px auto;
+    line-height: 20px;
 
+}
+
+.cv__item img {
+    display: block;
+    float: right;
+    max-width: 30%;
+    margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .cv__item h3 {
@@ -138,8 +146,17 @@ h1 {
     border-bottom: #ebebeb solid;
 }
 
+.cv__item h2 {
+    font-size: 24px;
+    color: white;
+}
+.cv__item span {
+    font-size: 20px;
+    color: white;
+}
+
 .cv__item p {
-    font-size: 13px;
+    font-size: 16px;
     color: white;
     margin-bottom: 40px;
 }
@@ -160,7 +177,7 @@ h1 {
 /*block send it now*/
 
 /*footer last line social and autor*/
-#social{
+#social {
     background: black;
 
 }
@@ -179,18 +196,16 @@ h1 {
     color: #aaacaf;
 }
 
-.social__links{
+.social__links {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.social__links img{
+.social__links img {
     padding: 0 15px 0 20px;
     height: 60px;
     width: 60px;
 }
-
-
 
 /*end footer last line social and autor*/
