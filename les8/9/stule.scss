@@ -1,0 +1,24 @@
+$mainColor: #f44336;
+$colorShiftAmount: (
+        "50": 38.7%,
+        "100": 36%,
+        "200": 27%,
+        "300": 18%,
+        "400": 9%,
+        "500": 0,
+        "600": -9%,
+        "700": -18%,
+        "800": -27%,
+        "900": -36%
+);
+
+.mainColor {
+  @each $key, $value in $colorShiftAmount {
+    &--#{$key} {
+      background: adjust_color(
+                      $mainColor,
+              $lightness: $value
+      );
+    }
+  }
+}

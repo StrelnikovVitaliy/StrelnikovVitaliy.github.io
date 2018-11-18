@@ -1,0 +1,21 @@
+.loader {
+    display: inline-block;
+    width: 420px;
+    fill: none;
+    stroke: #e49607;
+    stroke-width: 3px;
+    stroke-dasharray: 68%;
+    animation: rotateCircle 5s linear 0s infinite;
+}
+
+@keyframes rotateCircle {
+    from {
+        /*transform: rotate(0deg);*/
+        stroke-dashoffset: 0;
+        stroke: red
+    }
+    to {
+        stroke-dashoffset: -700;
+        stroke: green;
+    }
+}

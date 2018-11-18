@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="forth">
+    <a href="index.html"><h2>Link to the First page</h2></a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 800 400"
+         preserveAspectRatio="xMidYMid meet">
+
+        <style>
+            .forth{
+                display: flex;
+                justify-content: center;
+            }
+            svg {
+                background: url(../../img/large.jpg)no-repeat center / cover;
+
+            }
+
+            a {
+                position: absolute;
+                font-size: 3vh;
+            }
+
+
+            @media screen and (min-width: 320px) and (max-width: 768px) {
+                svg {
+                    height: 150px;
+                    width: 250px;
+                }
+            }
+
+            @media screen and (min-width: 768px) and (max-width: 960px) {
+                svg {
+                    height: 200px;
+                    width: 400px;
+                }
+            }
+
+            @media screen and (min-width: 960px) and (max-width: 1200px) {
+                svg {
+                    height: 250px;
+                    width: 500px;
+                }
+            }
+
+            @media screen and (min-width: 1200px) and (max-width: 1800px) {
+                svg {
+                    height: 300px;
+                    width: 600px;
+                }
+            }
+
+            @media screen and (min-width: 1800px) {
+                svg {
+                    height: 400px;
+                    width: 800px;
+                }
+            }
+        </style>
+    </svg>
+
+</div>
+</body>
+</html>
