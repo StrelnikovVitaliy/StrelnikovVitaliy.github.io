@@ -1,0 +1,75 @@
+$mainColor: #CDDC39;
+$secondColor: #448AFF;
+
+.task2_palitra{
+  &__primary{
+    background-color: $mainColor;
+    &:before {
+      content: "#{$mainColor}";
+    }
+  }
+  $colors: (
+          "dark": -13.9%,
+          "light": 13%,
+  );
+  @each $key, $color in $colors {
+    &__#{$key} {
+      background-color: adjust-color($mainColor,$lightness: $color);
+      &:before {
+        content: "#{adjust-color($mainColor,$lightness $color)}";
+      }
+    }
+  }
+  &__secondary-text{
+    $invert_primary: invert($mainColor);
+    $secondary-text: grayscale($invert_primary);
+    background-color: $secondary-text;
+    color: #fff;
+    &:before {
+      content: "#{$secondary-text}";
+    }
+    $colors: (
+            "primary-text": -32.8%,
+            "divider-color" : 28.5%
+    );
+    @each $key,$value in $colors {
+      &--#{$key} {
+        background-color: adjust-color($secondary-text, $lightness: $value);
+        color: #fff;
+        &:before {
+          content: "#{adjust-color($secondary-text, $lightness $value)}";
+        }
+      }
+    }
+  }
+  &__accent {
+    background-color: $secondColor;
+    color: #fff;
+    &:before {
+      content: "#{$secondColor}";
+    }
+  }
+
+
+}
+
+.task2_palitra {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 16px;
+}
+.task2_palitra > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 25%;
+  height: 100px;
+  text-transform: uppercase;
+}
+.task2_palitra > div:before {
+  padding-bottom: 70px;
+  padding-left: 10px;
+}

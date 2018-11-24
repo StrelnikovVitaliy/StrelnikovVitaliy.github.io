@@ -1,0 +1,8 @@
+%div.container
+  - ["red","pink"].each do |color|
+    %div.swatches
+      %div.swatch-title{:class => "#{color}-500"}
+        %h3 #{color}
+      %span.color-swatch{:class => "#{color}-50"} 50
+      - (1..9).each do |i|
+        %span.color-swatch{:class => "#{color}-#{i * 100}"} #{i * 100}

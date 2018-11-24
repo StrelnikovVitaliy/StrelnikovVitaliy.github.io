@@ -1,55 +1,171 @@
 body {
-    margin: 0;
-    padding: 0;
+    text-align: center;
     background: #F6EAFE;
 }
 
 a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    font-size: 24px;
-    letter-spacing: 4px;
-    color: #FF0067;
+    color: #000;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
-a svg,
-a svg rect {
+a,
+span {
+    font-size: 20px;
+
+}
+
+svg {
+    width: 300px;
+    height: 60px;
+}
+
+.svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+.svg:nth-child(2){
+    background-color: #29282E;
+}
+.svg:nth-child(3){
+    background-color: #29282E;
+}
+
+.svg .button {
+    text-decoration: none;
+    color: #F6EAFE;
+    position: relative;
+    width: 300px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.svg .button rect {
     position: absolute;
     top: 0;
     left: 0;
+    stroke-width: 6px;
+    stroke-dashoffset: 100px;
+    stroke: #FF0067;
+}
+.svg:nth-child(2) .button rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    stroke-width: 6px;
+    stroke-dashoffset: 400px;
+    stroke: #7300B3;
+}
+
+.svg .button span {
+    color: #FF0067;
+    width: 300px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 40px;
+    transition: all .2s linear;
+}
+
+.svg:nth-child(2) .button span {
+    color: #7300B3;
+    width: 300px;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 40px;
+    transition: all .2s linear;
+}
+
+.svg .button span:hover {
+    color: #F6EAFE;
+    background: #FF0067;
+    transition-delay: .5s;
+}
+.svg:nth-child(2) .button span:hover {
+    color: #F6EAFE;
+    background: #7300B3;
+    transition-delay: .5s;
+}
+
+.svg .button:hover rect {
+    animation: draw1 .75s linear forwards;
+}
+
+@keyframes draw1 {
+    0% {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 500;
+        stroke-width: 6px;
+    }
+    75% {
+        stroke-dasharray: 900;
+        stroke-width: 50px;
+    }
+    100% {
+        stroke-dasharray: 900;
+        stroke-width: 100px;
+    }
+}
+
+/*burger css*/
+.burger__menu
+{
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
+.burger
+{
     width: 100%;
     height: 100%;
-    fill: transparent;
 }
 
-a svg rect {
-    stroke: #FF0067;
-    stroke-width: 6;
-    transition: 2s;
-    stroke-dasharray: 55px 300;
-    stroke-dashoffset: 320;
+.burger .burger__top,
+.burger .burger__bottom
+{
+    transition: transform 0.2s ease-in 0s;
 }
 
-a:hover {
-    color: white;
-    fill: transparent;
+.burger__middle
+{
+    transition: 0.2s ease-in-out;
 }
 
-svg rect:hover {
-    fill: #FF0067;
-    fill-opacity: 0.7;
-    stroke-dasharray: 300 60;
-    stroke-dashoffset: 360;
-    stroke: #F6EAFE;
+.burger .burger__top
+{
+    transform-origin: 50% 16.66%;
+    transform: translateY(0) rotate(0deg);
 }
 
+.burger:hover .burger__top
+{
+    transform: translateY(33%) rotate(45deg);
+}
 
+.burger .burger__bottom
+{
+    transform-origin: 50% 83.34%;
+    transform: translateY(0) rotate(0deg);
+}
+
+.burger:hover .burger__bottom
+{
+    transform: translateY(-33%) rotate(-45deg);
+}
+
+.burger:hover .burger__middle
+{
+    opacity: 0;
+}

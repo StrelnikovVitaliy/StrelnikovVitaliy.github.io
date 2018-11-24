@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /** Возвращает дробную часть числа
+     * @param {Number}
+     * @return {Number}
+     */
+    function getFractional(num) {
+        return parseFloat('0.' + num.toString().split('.')[1]);
+    }
+
+    // console.clear();
+    // console.log('0.3', getFractional(0.3) );
+    // console.log('11.2', getFractional(11.2) );
+    // console.log('12.1', getFractional(12.1) );
+    // console.log('-5.45678', getFractional(-5.45678) );
+
+    // Напишите функцию, которая будет возвращать случайное целое число в интервале min, max
+    function getRandom(min, max) {
+        return Math.floor(min + (max - min) * Math.random());
+    }
+
+    // console.clear();
+    // console.log(10, 15, getRandom(10, 15) );
+    // console.log(12, 18, getRandom(12, 18) );
+    // console.log(44, 45, getRandom(44, 45) );
+
+    var schoolReportCard = {
+        'Anna': 29,
+        'Serg': 35,
+        'Anton': 1,
+        'Elena': 99
+    };
+
+    function getBestScholar( schoolReportCard ) {
+        var bestScholarName = '';
+
+        for (var name in schoolReportCard) {
+            if (!bestScholarName) {
+                bestScholarName = name;
+                continue;
+            }
+
+            if (schoolReportCard[name] > schoolReportCard[bestScholarName]) {
+                bestScholarName = name;
+            }
+        }
+
+        return bestScholarName;
+    }
+
+    function getBestScholar2( schoolReportCard ) {
+        // console.log(Object.keys(schoolReportCard));
+        return Object.keys(schoolReportCard)
+            .reduce(function(bestScholarName, name) {
+                // console.log({bestScholarName, name});
+                if (!bestScholarName) {
+                    return name;
+                }
+
+                if (schoolReportCard[name] > schoolReportCard[bestScholarName]) {
+                    return name;
+                }
+
+                return bestScholarName;
+            }, '');
+    }
+
+    // console.clear();
+    // for (var i=0; i<5; i++) {
+    //   var schoolReportCard = {
+    //     'Anna': getRandom(1, 100),
+    //     'Serg': getRandom(1, 100),
+    //     'Anton': getRandom(1, 100),
+    //     'Elena': getRandom(1, 100)
+    //   }
+
+    //   console.log(schoolReportCard, getBestScholar2( schoolReportCard ));
+    // }
+
+    function getArraySum( arr ) {
+        // console.log({arr});
+        return arr.reduce(function(arrSum, num) {
+            // console.log({arrSum, num});
+            return arrSum + num;
+        }, 0);
+    }
+
+    // console.clear();
+    // console.log( 5, getArraySum( [1,1,1,1,1] ));
+    // console.log( 15, getArraySum( [1,2,3,4,5] ));
+    // console.log( 7, getArraySum( [-1,2,-3,4,5] ));
+
+    function getSolidSubArray( arr ) {
+        var result = [];
+
+        for (var l = 1; l <= arr.length; l++) {
+            for (var i=0; i <= arr.length - l; i++) {
+                // console.log({l, i, subArr: arr.slice(i, i + l)});
+                result.push(arr.slice(i, i + l));
+            }
+        }
+
+        return result;
+    }
+
+    // console.clear();
+    // console.log( getSolidSubArray( [1, 2, 4, 8] ) );
+
+    /* Напишите функцию, которая получает на вход массив чисел типа `[1, -2, 3, 4, -9, 6]`.
+    Задача – найти непрерывный подмассив, сумма элементов которого максимальна. И вернуть эту сумму. */
+
+</script>
+</body>
+</html>
