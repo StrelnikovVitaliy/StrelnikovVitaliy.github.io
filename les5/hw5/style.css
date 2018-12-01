@@ -361,10 +361,8 @@ h1 {
 
 .social__links {
     display: flex;
-    max-width: 20px;
-    max-height: 20px;
-    width: 100%;
     padding-top: 15px;
+    max-height: 20px;
 }
 
 .social__links img{
