@@ -8,6 +8,7 @@ body {
 section {
     display: grid;
 }
+
 .columns {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -19,6 +20,7 @@ section {
     -moz-column-rule: 1px solid transparent;
     column-rule: 1px solid transparent;
 }
+
 .fab {
     color: #7bcbc1;
     padding-left: 5px;
@@ -76,7 +78,7 @@ h2 {
 
 p {
     color: white;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: normal;
     margin: 0;
 }
@@ -133,6 +135,7 @@ first line content design
 }
 
 /*second line position*/
+
 .second-line {
     grid-template-columns: repeat(90, 1fr);
     grid-auto-rows: 150px;
@@ -246,7 +249,6 @@ first line content design
 }
 
 /*second line content design end*/
-
 /*third line position*/
 
 .third-line {
@@ -259,7 +261,6 @@ first line content design
     grid-column-end: 43;
     background-color: #fcfcfc;
     background: url("img/img8.png") no-repeat center top / cover;
-
 }
 
 .third-line div:nth-child(2) {
@@ -277,7 +278,6 @@ first line content design
 }
 
 /*third line position end*/
-
 /*third line content design*/
 .third-line .container:nth-child(1) {
     padding: 120px 0 0 80px;
@@ -318,25 +318,27 @@ first line content design
     border-top: 1px solid grey;
 }
 
-
 /*forth line position end*/
-/*third line content design*/
+/*forth line content design*/
+
 .forth-line .container:nth-child(1) {
     padding: 130px 0 0 30px;
 }
+
 .forth-line .container:nth-child(2) {
     padding: 40px 0 0 40px;
 }
-.forth-line .container:nth-child(2) .columns{
+
+.forth-line .container:nth-child(2) .columns {
     max-width: 215px;
     padding: 10px 5px 0 0;
 }
+
 .forth-line .container:nth-child(2) p {
-font-size: 10px;
+    font-size: 10px;
 }
 
-/*third line content design end*/
-
+/*forth line content design end*/
 /*fifth line position*/
 
 .fifth-line {
@@ -378,10 +380,18 @@ font-size: 10px;
 }
 
 .social a {
-    padding: 3px 91px 3px 3px;
+    padding: 3px 100px 3px 3px;
 }
 
+/*fifth line position end*/
+/*fifth line content design*/
+.fifth-line .container:nth-child(1) {
+    padding: 30px 20px 10px 20px;
+}
+
+/*fifth line content design end*/
 /*sixth line position*/
+
 .sixth-line {
     grid-template-columns: repeat(90, 1fr);
     grid-auto-rows: 300px;
@@ -399,7 +409,32 @@ font-size: 10px;
     background-color: #e5e9df;
 }
 
+/*sixth line position end*/
+/*sixth line content design*/
+.sixth-line .container:nth-child(1) {
+    padding: 110px 10px 10px 60px;
+}
+
+.sixth-line .container:nth-child(2) {
+    padding: 40px 40px 20px 50px;
+}
+
+.sixth-line a{
+padding-left: 140px;
+    font-size: 10px;
+}
+.sixth-line p{
+    max-width: 200px;
+}
+.sixth-line .item-name{
+    font-size: 13px;
+}
+
+
+
+/*sixth line content design end*/
 /*seventh line position*/
+
 .seventh-line {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 400px;
@@ -421,3 +456,5 @@ font-size: 10px;
 .align-bottom {
     padding-top: 70px;
 }
+
+/*seventh line position end*/
