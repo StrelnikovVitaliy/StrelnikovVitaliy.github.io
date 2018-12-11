@@ -881,7 +881,7 @@ first line content design
         padding: 20px 20px 20px 40px;
     }
 
-    .sixth-line a {
+    .sixth-line a.orange-style {
         padding-left: 140px;
         font-size: 10px;
     }
