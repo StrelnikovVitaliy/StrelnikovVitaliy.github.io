@@ -125,6 +125,8 @@ svg.burger {
     width: 60px;
     height: 60px;
     border: 1px solid white;
+    cursor: pointer;
+
 }
 
 /*
@@ -249,7 +251,7 @@ first line content design
 }
 
 /*second line content design end*/
-/*third line position*/
+/*cssgen line position*/
 
 .third-line {
     grid-template-columns: repeat(90, 1fr);
@@ -277,8 +279,8 @@ first line content design
     background: url("img/orangelongbcg.jpg") no-repeat center top / cover;
 }
 
-/*third line position end*/
-/*third line content design*/
+/*cssgen line position end*/
+/*cssgen line content design*/
 .third-line .container:nth-child(1) {
     padding: 120px 0 0 80px;
 }
@@ -291,8 +293,8 @@ first line content design
     padding: 36px 0 0 66px;
 }
 
-/*third line content design end*/
-/*forth line position*/
+/*cssgen line content design end*/
+/*jsmenu line position*/
 .forth-line {
     grid-template-columns: repeat(90, 1fr);
     grid-auto-rows: 300px;
@@ -318,8 +320,8 @@ first line content design
     border-top: 1px solid grey;
 }
 
-/*forth line position end*/
-/*forth line content design*/
+/*jsmenu line position end*/
+/*jsmenu line content design*/
 
 .forth-line .container:nth-child(1) {
     padding: 130px 0 0 30px;
@@ -338,7 +340,7 @@ first line content design
     font-size: 10px;
 }
 
-/*forth line content design end*/
+/*jsmenu line content design end*/
 /*fifth line position*/
 
 .fifth-line {
@@ -663,7 +665,7 @@ first line content design
         font-size: 2vw;
     }
 
-    /*third line*/
+    /*cssgen line*/
     .third-line {
         grid-template-columns: repeat(60, 1fr);
         grid-template-rows: 320px 200px;
@@ -694,8 +696,8 @@ first line content design
         background: #EBB23F none;
     }
 
-    /*third line position end*/
-    /*third line content design*/
+    /*cssgen line position end*/
+    /*cssgen line content design*/
     .third-line .container:nth-child(1) {
         padding: 220px 0 0 20%;
     }
@@ -732,7 +734,7 @@ first line content design
         font-size: 2.5vw;
     }
 
-    /*forth line position*/
+    /*jsmenu line position*/
     .forth-line {
         grid-template-columns: 1fr;
         grid-auto-rows: 100px;
@@ -762,8 +764,8 @@ first line content design
         border-top: 1px solid grey;
     }
 
-    /*forth line position end*/
-    /*forth line content design*/
+    /*jsmenu line position end*/
+    /*jsmenu line content design*/
     .forth-line .container:nth-child(1) {
         padding: 10px 40%;
     }
@@ -785,7 +787,7 @@ first line content design
         font-size: 1.5vw;
     }
 
-    /*forth line content design end*/
+    /*jsmenu line content design end*/
     /*fifth line position*/
     .fifth-line {
         grid-template-columns: 1fr;
@@ -1124,8 +1126,9 @@ first line content design
         font-size: 19px;
     }
 
-    .second-line .container:nth-child(7) {
-        padding: 30px 0 0 50%;
+    .second-line .container:nth-child(7){
+        padding-top: 300px;
+        padding-left: 50px;
     }
 
     .second-line .container:nth-child(7) p {
@@ -1136,7 +1139,7 @@ first line content design
         font-size: 15px;
     }
 
-    /*third line*/
+    /*cssgen line*/
     .third-line {
         grid-template-columns: repeat(60, 1fr);
         grid-template-rows: 320px 200px;
@@ -1167,8 +1170,8 @@ first line content design
         background: #EBB23F none;
     }
 
-    /*third line position end*/
-    /*third line content design*/
+    /*cssgen line position end*/
+    /*cssgen line content design*/
     .third-line .container:nth-child(1) {
         padding: 220px 0 0 3%;
     }
@@ -1205,7 +1208,7 @@ first line content design
         font-size: 18px;
     }
 
-    /*forth line position*/
+    /*jsmenu line position*/
     .forth-line {
         grid-template-columns: 1fr;
         grid-auto-rows: 100px;
@@ -1241,14 +1244,14 @@ first line content design
 
     .office {
         width: 60vw;
-  }
+    }
 
     .awards {
         border-top: 1px solid grey;
     }
 
-    /*forth line position end*/
-    /*forth line content design*/
+    /*jsmenu line position end*/
+    /*jsmenu line content design*/
     .forth-line .container:nth-child(1) {
         padding: 10px 40%;
     }
@@ -1265,7 +1268,7 @@ first line content design
         font-size: 14px;
     }
 
-    /*forth line content design end*/
+    /*jsmenu line content design end*/
     /*fifth line position*/
     .fifth-line {
         grid-template-columns: 1fr;
@@ -1424,11 +1427,91 @@ first line content design
 
     /*seventh line position end*/
 }
+
 /***************************************************/
 @media screen and (max-width: 500px) {
+    .second-line .container:nth-child(3) p {
+        width: 40%;
+    }
+
+    .second-line .container:nth-child(4){
+        padding-top: 300px;
+    }
+    .second-line .container:nth-child(7){
+        padding-top: 300px;
+        padding-left: 30px;
+    }
+
     .third-line div:nth-child(1) {
         background: #fcfcfc url("img/img8.png") no-repeat center top  / cover;
         background-size: 120%;
     }
 
+}
+
+/*nav style*/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: -30px;
+    top: 0;
+    background-color: transparent;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+#myNav {
+    background: none;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: grey;
+    text-shadow: 1px 1px white;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }

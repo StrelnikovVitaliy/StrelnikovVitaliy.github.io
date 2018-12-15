@@ -26,7 +26,7 @@
     </div>
     <div class="container">
         <a class="burger__menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="burger" onclick="openNav()">
                 <line class="burger__top" x2="10" stroke="white" stroke-width="1" stroke-linecap="round" x1="20" y2="12"
                       y1="12"></line>
                 <line class="burger__middle" stroke="white" stroke-width="1" stroke-linecap="round" x1="20" y1="15"
@@ -34,7 +34,24 @@
                 <line class="burger__bottom" stroke="white" stroke-width="1" stroke-linecap="round" x1="20" x2="10"
                       y2="18" y1="18"></line>
             </svg>
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+
+                <!-- Button to close the overlay navigation -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    <a href="#projects" onclick="closeNav()">Projects</a>
+                    <a href="#studio" onclick="closeNav()">Studio</a>
+                    <a href="#news" onclick="closeNav()">News</a>
+                    <a href="#contact-us" onclick="closeNav()">Contact us</a>
+                </div>
+
+            </div>
+
         </a>
+
         <p>90802 California <br>
             Long beach <br>
             PO Box 68789 <br>
@@ -45,7 +62,7 @@
     </div>
 </section>
 <section class="second-line">
-    <div class="container">
+    <div class="container" id="projects">
         <p class="black-color second-line-text-position"><i class="fas fa-arrow-right"></i> All </p>
         <br>
         <p class="second-line-text-position">
@@ -152,7 +169,7 @@
     </div>
 </section>
 <section class="forth-line">
-    <div class="container">
+    <div class="container" id="studio">
         <h2 class="movedright">STUDIO</h2>
     </div>
     <div class="container columns">
@@ -245,7 +262,7 @@
     </div>
 </section>
 <section class="sixth-line">
-    <div class="container">
+    <div class="container" id="news">
         <h2 class="movedright">NEWS</h2>
 
     </div>
@@ -279,7 +296,7 @@
                 width="450" height="390" frameborder="0" style="border:0" allowfullscreen
                 title="LocationInGoogleMaps"></iframe>
     </div>
-    <div class="container">
+    <div class="container" id="contact-us">
         <div class="columns">
             <p class="black-color">90802 California <br>
                 Long beach <br>
@@ -300,6 +317,7 @@
         <p class="black-color align-bottom">© 2014 DSGN. All rights reserved - Designed by theuncreativelab.com</p>
     </div>
 </section>
+<script src="script.js"></script>
 
 
 </body>
