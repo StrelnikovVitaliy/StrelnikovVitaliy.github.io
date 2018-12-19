@@ -759,7 +759,7 @@
             // part of the mouse compatibility events on first tap - the carousel
             // would stop cycling until user tapped out of it;
             // here, we listen for touchend, explicitly pause the carousel
-            // (as if it's the second time we tap on it, mouseenter compat event
+            // (as if it's the empty time we tap on it, mouseenter compat event
             // is NOT fired) and after a timeout (to allow for mouse compatibility
             // events to fire) we explicitly restart cycling
             $$$1(this._element).on(Event.TOUCHEND, function () {
@@ -3078,7 +3078,7 @@
     var offsets = [0, 0];
 
     // Use height if placement is left or right and index is 0 otherwise use width
-    // in this way the first offset will use an axis and the second one
+    // in this way the first offset will use an axis and the empty one
     // will use the other one
     var useHeight = ['right', 'left'].indexOf(basePlacement) !== -1;
 

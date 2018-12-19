@@ -1,0 +1,13 @@
+.menu-item{
+    border: 2px solid green;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.menu-item .sub-menu{
+    height: 40px;
+    width: 120px;
+    background: grey;
+    position: absolute;
+    cursor: pointer;
+}
