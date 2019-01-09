@@ -17,7 +17,6 @@ function init() {
 
     $pagerControls.append($pagerPrev, $pagerList, $pagerNext);
     $pager.append($pagerInfo, $pagerControls);
-    $pagerList.append.apply($pagerList, createPagerListContent(currentPageNumber, pagesCountNumber));// add pager to web with apply method
     $pagerInfo.innerText = getDescription(allRowsTable, rowsAmmount, currentPageNumber);
     $pagerInfo.classList.add('pager__info'); //add class to PagerInfo
     $pagerControls.classList.add('pager__controls'); //add class to pager__controls
@@ -27,22 +26,23 @@ function init() {
     $pagerPrev.innerText = 'Previous';
     $pagerNext.innerText = 'Next';
 
+    $rowsAmmount.addEventListener('input', function (e) {
+        rowsAmmount = e.target.value;
+        pagesCountNumber = getCountPages(rowsAmmount, allRowsTable);
+        $pagerInfo.innerText = getDescription(allRowsTable, rowsAmmount, currentPageNumber);
+        $pagerList.innerHTML = "";
+        $pagerList.append.apply($pagerList, createPagerListContent(currentPageNumber, pagesCountNumber));
+        showRows(currentPageNumber, Number(rowsAmmount));
+    });
+
     $pagerNext.setAttribute('href', `#page-${currentPageNumber + 1}`);
 
+    $pagerList.append.apply($pagerList, createPagerListContent(currentPageNumber, pagesCountNumber));// add pager to web with apply method
 
     function getCountPages(rowsAmmount, allRowsTable) {
         return Math.ceil(allRowsTable / rowsAmmount);
 
     }
-    $rowsAmmount.addEventListener("input", function(e){
-        rowsAmmount = e.target.value;
-        pagesCountNumber = getCountPages(allRowsTable, rowsAmmount);
-        $pagerInfo.innerText = getDescription( allRowsTable, rowsAmmount, currentPageNumber);
-        $pagerList.innerHTML="";
-        $pagerList.append.apply($pagerList, createPagerListContent(currentPageNumber, pagesCountNumber));
-
-        showRows( currentPageNumber, Number(rowsAmmount));
-    });
 
     function getDescription(allRowsTable, rowsAmmount, currentPageNumber) {
         return `Show ${(currentPageNumber - 1) * rowsAmmount + 1} to ${currentPageNumber * rowsAmmount} of ${allRowsTable} rows`;
@@ -146,4 +146,3 @@ function init() {
 }
 
 init();
-
