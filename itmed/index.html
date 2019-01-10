@@ -113,15 +113,15 @@
         }
 
 
-        const testArr = createRandomArray(20, 100),
+        const testArr = createRandomArray(4, 10),
 
             suffledTest = removeAndShuffle(testArr);
         var sumTestArr = 0;
         var sumsuffledTest = 0;
-        for (var i = 1; i < testArr.length; ++i) {
+        for (var i = 0; i < testArr.length; ++i) {
             sumTestArr += parseFloat(testArr[i]);
         }
-        for (var index = 1; index < suffledTest.length; ++index) {
+        for (var index = 0; index < suffledTest.length; ++index) {
             sumsuffledTest += parseFloat(suffledTest[index]);
         }
         var deletedElement = sumTestArr - sumsuffledTest;
