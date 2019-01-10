@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITMED Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form name="myForm">
+    <label for="choose1">Число1</label>
+    <input name="num1" id="choose1" type="number" required>
+    <label for="choose2">Число2</label>
+    <input name="num2" id="choose2" type="number" required>
+    <label for="choose3">Число3</label>
+    <input name="num3" id="choose3" type="number" required>
+    <label for="choose4">Число4</label>
+    <input name="num4" id="choose4" type="number" required>
+    <label for="choose5">Число5</label>
+    <input name="num5" id="choose5" type="number" required>
+    <label for="choose6">Число6</label>
+    <input name="num6" id="choose6" type="number" required>
+    <button onclick="checkForm()">Submit</button>
+</form>
+<script>
+    function checkForm() {
+        var a = document.forms["myForm"]["num1"].value,
+            b = document.forms["myForm"]["num2"].value,
+            c = document.forms["myForm"]["num3"].value,
+            d = document.forms["myForm"]["num4"].value,
+            e = document.forms["myForm"]["num5"].value,
+            f = document.forms["myForm"]["num6"].value,
+            sorter = [a, b, c, d, e, f];
+
+        var sortedArr = sorter.map(function (valueNum) {
+            return valueNum;
+
+        });
+        var sum = 0;
+        for (var i = 1; i < sorter.length; ++i) {
+            if ((i + 1) % 2 === 0) {
+                sum += parseFloat(sorter[i]);
+            }
+        }
+        alert("Сумма парных элеметнов " + sum);
+
+        alert("Соритрованный массив " + (sortedArr.sort(function (arg1, arg2) {
+            return arg1 - arg2;
+        })));
+
+        alert("Оригинал масива " + sorter);
+
+        alert("Минимальное значение " + Math.min.apply(null, sorter));
+        alert("Максимальное значение " + Math.max.apply(null, sorter));
+
+
+    }
+
+</script>
+</body>
+</html>
