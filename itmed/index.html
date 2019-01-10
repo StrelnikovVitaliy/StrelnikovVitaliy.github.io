@@ -8,19 +8,27 @@
 <body>
 <form name="myForm">
     <label>Число1
-        <input name="num1" id="id1" type="number" required></label>
+        <input name="num1" type="number" required></label>
     <label>Число2
-        <input name="num2" id="id2" type="number" required></label>
+        <input name="num2" type="number" required></label>
     <label>Число3
-        <input name="num3" id="id3" type="number" required></label>
+        <input name="num3" type="number" required></label>
     <label>Число4
-        <input name="num4" id="id4" type="number" required></label>
+        <input name="num4" type="number" required></label>
     <label>Число5
-        <input name="num5" id="id5" type="number" required></label>
-    <label>Число6<input name="num6" id="id6" type="number" required>
+        <input name="num5" type="number" required></label>
+    <label>Число6<input name="num6" type="number" required>
     </label>
     <button type="submit" onclick="checkForm()">Submit</button>
 </form>
+<form name="myForm">
+    <label>Удаление рандомного числа масива со 100 элементов</label>
+    <br>
+    <button onclick="checkMissingElement()">Submit</button>
+</form>
+<div>
+    <p id="result"></p>
+</div>
 <script>
     function checkForm() {
         var a = document.forms["myForm"]["num1"].value,
@@ -31,22 +39,22 @@
             f = document.forms["myForm"]["num6"].value,
             sorter = [a, b, c, d, e, f];
 
-        if (document.getElementById("id1").validity.valueMissing) {
+        if (document.forms["myForm"]["num1"].validity.valueMissing) {
             alert("Введите знаечние в поле Число1")
         }
-        if (document.getElementById("id2").validity.valueMissing) {
+        if (document.forms["myForm"]["num2"].validity.valueMissing) {
             alert("Введите знаечние в поле Число2")
         }
-        if (document.getElementById("id3").validity.valueMissing) {
+        if (document.forms["myForm"]["num3"].validity.valueMissing) {
             alert("Введите знаечние в поле Число3")
         }
-        if (document.getElementById("id4").validity.valueMissing) {
+        if (document.forms["myForm"]["num4"].validity.valueMissing) {
             alert("Введите знаечние в поле Число4")
         }
-        if (document.getElementById("id5").validity.valueMissing) {
+        if (document.forms["myForm"]["num5"].validity.valueMissing) {
             alert("Введите знаечние в поле Число5")
         }
-        if (document.getElementById("id6").validity.valueMissing) {
+        if (document.forms["myForm"]["num6"].validity.valueMissing) {
             alert("Введите знаечние в поле Число6")
         }
         else {
@@ -75,6 +83,56 @@
 
         }
     }
+
+    function checkMissingElement() {
+
+        function getRandomInt(max) {
+
+            return Math.round(Math.random() * max);
+
+        }
+
+
+        function createRandomArray(arrLength, arrMaxNum) {
+
+            return new Array(arrLength).fill(0).map(() => getRandomInt(arrMaxNum));
+
+        }
+
+
+        function removeAndShuffle(arr) {
+
+            const result = [...arr].sort(() => Math.random() - 0.5);
+
+
+            result.removedElem = result.splice(getRandomInt(result.length - 1), 1)[0];
+
+
+            return result;
+
+        }
+
+
+        const testArr = createRandomArray(20, 100),
+
+            suffledTest = removeAndShuffle(testArr);
+        var sumTestArr = 0;
+        var sumsuffledTest = 0;
+        for (var i = 1; i < testArr.length; ++i) {
+            sumTestArr += parseFloat(testArr[i]);
+        }
+        for (var index = 1; index < suffledTest.length; ++index) {
+            sumsuffledTest += parseFloat(suffledTest[index]);
+        }
+        var deletedElement = sumTestArr - sumsuffledTest;
+
+        alert(`Тестовый масив ${testArr}\r\nМасив без 1 элемента ${suffledTest}\r\nУдаленный элемент = ${deletedElement}`);
+
+
+
+
+    }
+
 
 </script>
 </body>
