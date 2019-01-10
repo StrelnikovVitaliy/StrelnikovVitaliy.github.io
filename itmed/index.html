@@ -7,19 +7,19 @@
 </head>
 <body>
 <form name="myForm">
-    <label for="choose1">Число1</label>
-    <input name="num1" id="choose1" type="number" required>
-    <label for="choose2">Число2</label>
-    <input name="num2" id="choose2" type="number" required>
-    <label for="choose3">Число3</label>
-    <input name="num3" id="choose3" type="number" required>
-    <label for="choose4">Число4</label>
-    <input name="num4" id="choose4" type="number" required>
-    <label for="choose5">Число5</label>
-    <input name="num5" id="choose5" type="number" required>
-    <label for="choose6">Число6</label>
-    <input name="num6" id="choose6" type="number" required>
-    <button onclick="checkForm()">Submit</button>
+    <label>Число1
+        <input name="num1" id="id1" type="number" required></label>
+    <label>Число2
+        <input name="num2" id="id2" type="number" required></label>
+    <label>Число3
+        <input name="num3" id="id3" type="number" required></label>
+    <label>Число4
+        <input name="num4" id="id4" type="number" required></label>
+    <label>Число5
+        <input name="num5" id="id5" type="number" required></label>
+    <label>Число6<input name="num6" id="id6" type="number" required>
+    </label>
+    <button type="submit" onclick="checkForm()">Submit</button>
 </form>
 <script>
     function checkForm() {
@@ -31,28 +31,49 @@
             f = document.forms["myForm"]["num6"].value,
             sorter = [a, b, c, d, e, f];
 
-        var sortedArr = sorter.map(function (valueNum) {
-            return valueNum;
-
-        });
-        var sum = 0;
-        for (var i = 1; i < sorter.length; ++i) {
-            if ((i + 1) % 2 === 0) {
-                sum += parseFloat(sorter[i]);
-            }
+        if (document.getElementById("id1").validity.valueMissing) {
+            alert("Введите знаечние в поле Число1")
         }
-        alert("Сумма парных элеметнов " + sum);
+        if (document.getElementById("id2").validity.valueMissing) {
+            alert("Введите знаечние в поле Число2")
+        }
+        if (document.getElementById("id3").validity.valueMissing) {
+            alert("Введите знаечние в поле Число3")
+        }
+        if (document.getElementById("id4").validity.valueMissing) {
+            alert("Введите знаечние в поле Число4")
+        }
+        if (document.getElementById("id5").validity.valueMissing) {
+            alert("Введите знаечние в поле Число5")
+        }
+        if (document.getElementById("id6").validity.valueMissing) {
+            alert("Введите знаечние в поле Число6")
+        }
+        else {
+            var sortedArr = sorter.map(function (valueNum) {
+                return valueNum;
 
-        alert("Соритрованный массив " + (sortedArr.sort(function (arg1, arg2) {
-            return arg1 - arg2;
-        })));
+            });
+            var sum = 0;
+            for (var i = 1; i < sorter.length; ++i) {
+                if ((i + 1) % 2 === 0) {
+                    sum += parseFloat(sorter[i]);
+                }
+            }
 
-        alert("Оригинал масива " + sorter);
+            alert("Сумма парных элеметнов " + sum);
 
-        alert("Минимальное значение " + Math.min.apply(null, sorter));
-        alert("Максимальное значение " + Math.max.apply(null, sorter));
+            alert("Соритрованный массив " + (sortedArr.sort(function (arg1, arg2) {
+                return arg1 - arg2;
+            })));
+
+            alert("Оригинал масива " + sorter);
+
+            alert("Минимальное значение " + Math.min.apply(null, sorter));
+            alert("Максимальное значение " + Math.max.apply(null, sorter));
 
 
+        }
     }
 
 </script>
