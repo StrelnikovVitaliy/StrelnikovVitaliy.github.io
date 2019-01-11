@@ -1,10 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="description" content="Project">
+    <meta name="author" content="Vitalii Strelnikov">
+    <meta name="keywords" content="how to start coding">
+    <title>Poject | Home</title>
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/heading.css">
 </head>
 <body>
+<div class="container">
+    <div class="container__heading">
+        <a href="#" class="container__heading--logo"><img src="assets/img/logo.png" alt="logotype"></a>
+        <nav>
+            <ul class="container__menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="container">
+    <!-- Carousel container -->
+    <div class="container__carousel">
 
+        <!-- Full-width images with number and caption text -->
+        <div class="container__carousel__slides container__carousel__slides--fade">
+            <div class="numbertext">1 / 4</div>
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="container__carousel__slides container__carousel__slides--fade">
+            <div class="numbertext">2 / 4</div>
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="container__carousel__slides container__carousel__slides--fade">
+            <div class="numbertext">3 / 4</div>
+            <div class="text">Caption Three</div>
+        </div>
+        <div class="container__carousel__slides container__carousel__slides--fade">
+            <div class="numbertext">4 / 4</div>
+            <div class="text">Caption Four</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="container__carousel__dots">
+            <div class="container__carousel__dots--position">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- The dots/circles -->
+
+</div>
+
+<script src="assets/js/carousel.js">
+</script>
 </body>
 </html>

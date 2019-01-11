@@ -1,0 +1,40 @@
+.container__heading {
+    width: 99.1%;
+    display: flex;
+    position: absolute;
+    top: 8px;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.container__heading--logo {
+    margin-left: 10%;
+    margin-right: 35%;
+    justify-content: center;
+
+}
+
+.container__menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container__menu li {
+    float: left;
+    display: block;
+    margin: 30px 30px;
+}
+
+.container__menu li a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.container__menu li:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
