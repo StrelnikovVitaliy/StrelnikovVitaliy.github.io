@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-td {
+tbody td {
     height: 10vh;
     width: 10vh;
 }
