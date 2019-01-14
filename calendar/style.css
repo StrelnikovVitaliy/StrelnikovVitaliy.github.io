@@ -7,12 +7,12 @@
     text-align: center;
 }
 
-tbody td {
+td {
     height: 10vh;
     width: 10vh;
 }
 
-td:hover {
+tbody td:hover {
     background-color: #eaeaed;
     font-size: 5vh;
 }
